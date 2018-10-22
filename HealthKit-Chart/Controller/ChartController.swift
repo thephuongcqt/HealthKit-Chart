@@ -7,24 +7,23 @@
 //
 
 import UIKit
+import HealthKit
 
 class ChartController: UIViewController {
-
+    
+    let healthStore = HKHealthStore()
+    
+    var stepsDic: [Date: Double]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let endDate = Date()
+        let startDate = Calendar.current.date(byAdding: .day, value: -70, to: endDate)!
+        HealthKitAssistant.shared.retrieveStepCount(startDate: startDate, endDate: endDate) { (steps, startDate, endDate) in
+            self.stepsDic?[endDate] = steps
+        }
     }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

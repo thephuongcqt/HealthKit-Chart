@@ -17,8 +17,7 @@ class HomeController: UITabBarController {
     }
     
     private func authorizeHealthKit() {
-        HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
-            
+        HealthKitAssistant.shared.authorizeHealthKit { (authorized, error) in
             guard authorized else {
                 let baseMessage = "HealthKit Authorization Failed"
                 if let error = error {
@@ -28,10 +27,8 @@ class HomeController: UITabBarController {
                 }
                 return
             }
-            
             print("HealthKit Successfully Authorized.")
         }
-        
     }
 
 }

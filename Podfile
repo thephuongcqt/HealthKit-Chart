@@ -7,4 +7,5 @@ target 'HealthKit-Chart' do
 
   # Pods for HealthKit-Chart
 	pod 'Eureka'
+    pod 'Charts'
 end

@@ -16,9 +16,10 @@
 		BF039B3E2179B3E300DCE447 /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B3D2179B3E300DCE447 /* InformationController.swift */; };
 		BF039B402179B3F300DCE447 /* ChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B3F2179B3F300DCE447 /* ChartController.swift */; };
 		BF039B442179B4A800DCE447 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B432179B4A800DCE447 /* WorkoutController.swift */; };
-		BF039B462179BC6500DCE447 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B452179BC6500DCE447 /* HealthKitSetupAssistant.swift */; };
+		BF039B462179BC6500DCE447 /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B452179BC6500DCE447 /* HealthKitAssistant.swift */; };
 		BF039B482179BD5100DCE447 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B472179BD5100DCE447 /* ProfileData.swift */; };
 		BF039B4C2179C78B00DCE447 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF039B4B2179C78B00DCE447 /* HealthKit.framework */; };
+		BFFCA6C3217DB0A400750CA3 /* HealthKitAssitant+Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCA6C2217DB0A400750CA3 /* HealthKitAssitant+Report.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +34,11 @@
 		BF039B3D2179B3E300DCE447 /* InformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
 		BF039B3F2179B3F300DCE447 /* ChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartController.swift; sourceTree = "<group>"; };
 		BF039B432179B4A800DCE447 /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
-		BF039B452179BC6500DCE447 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
+		BF039B452179BC6500DCE447 /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
 		BF039B472179BD5100DCE447 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		BF039B492179C78B00DCE447 /* HealthKit-Chart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HealthKit-Chart.entitlements"; sourceTree = "<group>"; };
 		BF039B4B2179C78B00DCE447 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		BFFCA6C2217DB0A400750CA3 /* HealthKitAssitant+Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthKitAssitant+Report.swift"; sourceTree = "<group>"; };
 		E39DD5A9C127F79A44DFD7E2 /* Pods-HealthKit-Chart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKit-Chart.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKit-Chart/Pods-HealthKit-Chart.release.xcconfig"; sourceTree = "<group>"; };
 		EE93B8AE3D4738898FDE3AA8 /* Pods-HealthKit-Chart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKit-Chart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKit-Chart/Pods-HealthKit-Chart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				BF039B492179C78B00DCE447 /* HealthKit-Chart.entitlements */,
-				BF039B452179BC6500DCE447 /* HealthKitSetupAssistant.swift */,
+				BF039B452179BC6500DCE447 /* HealthKitAssistant.swift */,
+				BFFCA6C2217DB0A400750CA3 /* HealthKitAssitant+Report.swift */,
 				BF039B3C2179B38600DCE447 /* Controller */,
 				BF039B2A2179B1CD00DCE447 /* AppDelegate.swift */,
 				BF039B2E2179B1CD00DCE447 /* Main.storyboard */,
@@ -222,12 +225,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HealthKit-Chart/Pods-HealthKit-Chart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,7 +251,8 @@
 				BF039B442179B4A800DCE447 /* WorkoutController.swift in Sources */,
 				BF039B482179BD5100DCE447 /* ProfileData.swift in Sources */,
 				BF039B2D2179B1CD00DCE447 /* HomeController.swift in Sources */,
-				BF039B462179BC6500DCE447 /* HealthKitSetupAssistant.swift in Sources */,
+				BF039B462179BC6500DCE447 /* HealthKitAssistant.swift in Sources */,
+				BFFCA6C3217DB0A400750CA3 /* HealthKitAssitant+Report.swift in Sources */,
 				BF039B402179B3F300DCE447 /* ChartController.swift in Sources */,
 				BF039B2B2179B1CD00DCE447 /* AppDelegate.swift in Sources */,
 			);
@@ -399,6 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQT9G6B78G;
 				INFOPLIST_FILE = "HealthKit-Chart/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +426,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQT9G6B78G;
 				INFOPLIST_FILE = "HealthKit-Chart/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

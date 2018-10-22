@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,6 +21,7 @@
                     <connections>
                         <segue destination="ad6-NG-1VN" kind="relationship" relationship="viewControllers" id="LeV-9p-20F"/>
                         <segue destination="oSY-ZR-Kka" kind="relationship" relationship="viewControllers" id="se2-Et-FPW"/>
+                        <segue destination="0z7-ZM-AQ5" kind="relationship" relationship="viewControllers" id="CwQ-oD-sL6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8y3-gd-0Wm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -35,7 +35,23 @@
             </objects>
             <point key="canvasLocation" x="-204" y="19"/>
         </scene>
-        <!--Item-->
+        <!--Chart-->
+        <scene sceneID="uVl-0s-B0O">
+            <objects>
+                <viewController id="0z7-ZM-AQ5" customClass="ChartController" customModule="HealthKit_Chart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KW4-m7-NAT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4v6-Ck-2IJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chart" id="VT0-Lf-QIa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JP2-Ca-Ty6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="-758"/>
+        </scene>
+        <!--Profile-->
         <scene sceneID="nWm-2c-wse">
             <objects>
                 <tableViewController id="ad6-NG-1VN" customClass="InformationController" customModule="HealthKit_Chart" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,6 +174,34 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5x8-Ti-JEv">
+                                        <rect key="frame" x="0.0" y="204" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5x8-Ti-JEv" id="H3N-xX-poa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uak-IO-4gU">
+                                                    <rect key="frame" x="292.5" y="11.5" width="62.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today Energy Burn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um5-RG-P6c">
+                                                    <rect key="frame" x="20" y="11.5" width="144.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Um5-RG-P6c" firstAttribute="leading" secondItem="H3N-xX-poa" secondAttribute="leading" constant="20" id="9oN-uI-bUl"/>
+                                                <constraint firstItem="Uak-IO-4gU" firstAttribute="centerY" secondItem="H3N-xX-poa" secondAttribute="centerY" id="WNz-Yk-eRq"/>
+                                                <constraint firstItem="Um5-RG-P6c" firstAttribute="centerY" secondItem="H3N-xX-poa" secondAttribute="centerY" id="euC-7u-MBd"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uak-IO-4gU" secondAttribute="trailing" constant="20" id="xG6-HL-Owu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -166,10 +210,11 @@
                             <outlet property="delegate" destination="ad6-NG-1VN" id="NFg-iO-HPo"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="yS9-5B-QVA"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="yS9-5B-QVA"/>
                     <connections>
                         <outlet property="lblAge" destination="B68-0K-3O3" id="iVi-Rl-26x"/>
                         <outlet property="lblBlood" destination="cqR-Ha-3dY" id="Ucb-hz-0CX"/>
+                        <outlet property="lblEnergyBurn" destination="Uak-IO-4gU" id="13m-JS-skD"/>
                         <outlet property="lblSex" destination="JNm-CA-3tl" id="dsy-Xd-USP"/>
                         <outlet property="lblTodayStep" destination="4Zo-0G-y5D" id="iCU-sj-1lJ"/>
                     </connections>
@@ -178,7 +223,7 @@
             </objects>
             <point key="canvasLocation" x="773.60000000000002" y="17.541229385307346"/>
         </scene>
-        <!--Item-->
+        <!--Store Data-->
         <scene sceneID="nmA-bq-9lZ">
             <objects>
                 <viewController id="oSY-ZR-Kka" customClass="WorkoutController" customModule="HealthKit_Chart" customModuleProvider="target" sceneMemberID="viewController">
@@ -188,7 +233,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ise-eW-LYo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="m3g-px-Anu"/>
+                    <tabBarItem key="tabBarItem" title="Store Data" id="m3g-px-Anu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niw-ok-Ze6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,16 +1,22 @@
 PODS:
+  - Charts (3.2.1):
+    - Charts/Core (= 3.2.1)
+  - Charts/Core (3.2.1)
   - Eureka (4.3.0)
 
 DEPENDENCIES:
+  - Charts
   - Eureka
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Charts
     - Eureka
 
 SPEC CHECKSUMS:
+  Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   Eureka: 6d711cb30ca333b4bc893110285a722ae3840114
 
-PODFILE CHECKSUM: b15b93b003aefcc79440c401b56d2f3ee5af093d
+PODFILE CHECKSUM: 0963723eabb44ccd73b015461b7bd5aa412f2cbe
 
 COCOAPODS: 1.5.3
