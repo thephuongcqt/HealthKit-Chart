@@ -11,13 +11,10 @@ import HealthKit
 
 extension HealthKitAssistant{
     func retrieveStepCount(startDate: Date, endDate: Date, completion: @escaping (_ stepRetrieved: Double, _ startDate: Date, _ endDate: Date) -> Void) {
-        //   Define the Step Quantity Type
-        let stepsCount = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)
-        //   Get the start of the day
+        let stepsCount = HKQuantityType.quantityType(forIdentifier: .stepCount)
         let date = Date()
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
-        let newDate = cal.startOfDay(for: date)
-        //  Set the Predicates & Interval
+        let newDate = cal.startOfDay(for: date)        
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictStartDate)
         var interval = DateComponents()
         interval.day = 1
@@ -41,7 +38,7 @@ extension HealthKitAssistant{
                         completion(steps, startDate, endDate)
                     }
                 }
-            }            
+            }
         }
         healthStore.execute(query)
     }

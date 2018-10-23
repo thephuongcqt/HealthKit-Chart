@@ -8,22 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		215FCBF99DA8A563DF884572 /* Pods_HealthKit_Chart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223A8009D13857EB8DB0952C /* Pods_HealthKit_Chart.framework */; };
+		BF005BE5217EDAE2000A72A3 /* LineChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF005BE4217EDAE2000A72A3 /* LineChartController.swift */; };
 		BF039B2B2179B1CD00DCE447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B2A2179B1CD00DCE447 /* AppDelegate.swift */; };
 		BF039B2D2179B1CD00DCE447 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B2C2179B1CD00DCE447 /* HomeController.swift */; };
 		BF039B302179B1CD00DCE447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF039B2E2179B1CD00DCE447 /* Main.storyboard */; };
 		BF039B322179B1CE00DCE447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF039B312179B1CE00DCE447 /* Assets.xcassets */; };
 		BF039B352179B1CE00DCE447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF039B332179B1CE00DCE447 /* LaunchScreen.storyboard */; };
 		BF039B3E2179B3E300DCE447 /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B3D2179B3E300DCE447 /* InformationController.swift */; };
-		BF039B402179B3F300DCE447 /* ChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B3F2179B3F300DCE447 /* ChartController.swift */; };
+		BF039B402179B3F300DCE447 /* BarChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B3F2179B3F300DCE447 /* BarChartController.swift */; };
 		BF039B442179B4A800DCE447 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B432179B4A800DCE447 /* WorkoutController.swift */; };
 		BF039B462179BC6500DCE447 /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B452179BC6500DCE447 /* HealthKitAssistant.swift */; };
 		BF039B482179BD5100DCE447 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039B472179BD5100DCE447 /* ProfileData.swift */; };
 		BF039B4C2179C78B00DCE447 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF039B4B2179C78B00DCE447 /* HealthKit.framework */; };
 		BFFCA6C3217DB0A400750CA3 /* HealthKitAssitant+Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCA6C2217DB0A400750CA3 /* HealthKitAssitant+Report.swift */; };
+		BFFCA6C5217DB58900750CA3 /* ChartsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCA6C4217DB58900750CA3 /* ChartsExtension.swift */; };
+		BFFCA6C7217DC38300750CA3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCA6C6217DC38300750CA3 /* PageViewController.swift */; };
+		BFFCA6C9217DC46F00750CA3 /* PieChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCA6C8217DC46F00750CA3 /* PieChartController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		223A8009D13857EB8DB0952C /* Pods_HealthKit_Chart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthKit_Chart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF005BE4217EDAE2000A72A3 /* LineChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartController.swift; sourceTree = "<group>"; };
 		BF039B272179B1CD00DCE447 /* HealthKit-Chart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HealthKit-Chart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF039B2A2179B1CD00DCE447 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF039B2C2179B1CD00DCE447 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -32,13 +37,16 @@
 		BF039B342179B1CE00DCE447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF039B362179B1CE00DCE447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF039B3D2179B3E300DCE447 /* InformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
-		BF039B3F2179B3F300DCE447 /* ChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartController.swift; sourceTree = "<group>"; };
+		BF039B3F2179B3F300DCE447 /* BarChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartController.swift; sourceTree = "<group>"; };
 		BF039B432179B4A800DCE447 /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		BF039B452179BC6500DCE447 /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
 		BF039B472179BD5100DCE447 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		BF039B492179C78B00DCE447 /* HealthKit-Chart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HealthKit-Chart.entitlements"; sourceTree = "<group>"; };
 		BF039B4B2179C78B00DCE447 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		BFFCA6C2217DB0A400750CA3 /* HealthKitAssitant+Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthKitAssitant+Report.swift"; sourceTree = "<group>"; };
+		BFFCA6C4217DB58900750CA3 /* ChartsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsExtension.swift; sourceTree = "<group>"; };
+		BFFCA6C6217DC38300750CA3 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		BFFCA6C8217DC46F00750CA3 /* PieChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartController.swift; sourceTree = "<group>"; };
 		E39DD5A9C127F79A44DFD7E2 /* Pods-HealthKit-Chart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKit-Chart.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKit-Chart/Pods-HealthKit-Chart.release.xcconfig"; sourceTree = "<group>"; };
 		EE93B8AE3D4738898FDE3AA8 /* Pods-HealthKit-Chart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKit-Chart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKit-Chart/Pods-HealthKit-Chart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +104,7 @@
 				BF039B332179B1CE00DCE447 /* LaunchScreen.storyboard */,
 				BF039B362179B1CE00DCE447 /* Info.plist */,
 				BF039B472179BD5100DCE447 /* ProfileData.swift */,
+				BFFCA6C4217DB58900750CA3 /* ChartsExtension.swift */,
 			);
 			path = "HealthKit-Chart";
 			sourceTree = "<group>";
@@ -105,8 +114,11 @@
 			children = (
 				BF039B2C2179B1CD00DCE447 /* HomeController.swift */,
 				BF039B3D2179B3E300DCE447 /* InformationController.swift */,
-				BF039B3F2179B3F300DCE447 /* ChartController.swift */,
+				BF039B3F2179B3F300DCE447 /* BarChartController.swift */,
 				BF039B432179B4A800DCE447 /* WorkoutController.swift */,
+				BFFCA6C6217DC38300750CA3 /* PageViewController.swift */,
+				BFFCA6C8217DC46F00750CA3 /* PieChartController.swift */,
+				BF005BE4217EDAE2000A72A3 /* LineChartController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,12 +260,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF039B3E2179B3E300DCE447 /* InformationController.swift in Sources */,
+				BFFCA6C7217DC38300750CA3 /* PageViewController.swift in Sources */,
+				BF005BE5217EDAE2000A72A3 /* LineChartController.swift in Sources */,
+				BFFCA6C9217DC46F00750CA3 /* PieChartController.swift in Sources */,
 				BF039B442179B4A800DCE447 /* WorkoutController.swift in Sources */,
 				BF039B482179BD5100DCE447 /* ProfileData.swift in Sources */,
 				BF039B2D2179B1CD00DCE447 /* HomeController.swift in Sources */,
 				BF039B462179BC6500DCE447 /* HealthKitAssistant.swift in Sources */,
 				BFFCA6C3217DB0A400750CA3 /* HealthKitAssitant+Report.swift in Sources */,
-				BF039B402179B3F300DCE447 /* ChartController.swift in Sources */,
+				BFFCA6C5217DB58900750CA3 /* ChartsExtension.swift in Sources */,
+				BF039B402179B3F300DCE447 /* BarChartController.swift in Sources */,
 				BF039B2B2179B1CD00DCE447 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

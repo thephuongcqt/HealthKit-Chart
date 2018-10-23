@@ -21,7 +21,7 @@
                     <connections>
                         <segue destination="ad6-NG-1VN" kind="relationship" relationship="viewControllers" id="LeV-9p-20F"/>
                         <segue destination="oSY-ZR-Kka" kind="relationship" relationship="viewControllers" id="se2-Et-FPW"/>
-                        <segue destination="0z7-ZM-AQ5" kind="relationship" relationship="viewControllers" id="CwQ-oD-sL6"/>
+                        <segue destination="6D5-Az-Otq" kind="relationship" relationship="viewControllers" id="4W0-ar-zNB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8y3-gd-0Wm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -33,23 +33,108 @@
                     </items>
                 </navigationBar>
             </objects>
-            <point key="canvasLocation" x="-204" y="19"/>
+            <point key="canvasLocation" x="-407" y="-14"/>
+        </scene>
+        <!--PageView-->
+        <scene sceneID="vXT-Fg-UQy">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="6D5-Az-Otq" customClass="PageViewController" customModule="HealthKit_Chart" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="PageView" id="9Lc-dQ-Z5y"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kOI-OP-f59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407" y="-725"/>
         </scene>
         <!--Chart-->
         <scene sceneID="uVl-0s-B0O">
             <objects>
-                <viewController id="0z7-ZM-AQ5" customClass="ChartController" customModule="HealthKit_Chart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ChartController" storyboardIdentifier="BarChartController" id="0z7-ZM-AQ5" customClass="BarChartController" customModule="HealthKit_Chart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KW4-m7-NAT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuT-Yx-FzY" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="19" y="76.5" width="337.5" height="534"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tuT-Yx-FzY" firstAttribute="width" secondItem="KW4-m7-NAT" secondAttribute="width" multiplier="0.9" id="nWH-ab-8Dg"/>
+                            <constraint firstItem="tuT-Yx-FzY" firstAttribute="centerY" secondItem="4v6-Ck-2IJ" secondAttribute="centerY" id="qJH-D4-q5B"/>
+                            <constraint firstItem="tuT-Yx-FzY" firstAttribute="height" secondItem="KW4-m7-NAT" secondAttribute="height" multiplier="0.8" id="yXp-eK-fI8"/>
+                            <constraint firstItem="tuT-Yx-FzY" firstAttribute="centerX" secondItem="4v6-Ck-2IJ" secondAttribute="centerX" id="z2K-1F-Rpa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4v6-Ck-2IJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chart" id="VT0-Lf-QIa"/>
+                    <connections>
+                        <outlet property="barChart" destination="tuT-Yx-FzY" id="m9J-wx-YSJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JP2-Ca-Ty6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="-758"/>
+            <point key="canvasLocation" x="774" y="-725"/>
+        </scene>
+        <!--Line Chart Controller-->
+        <scene sceneID="0Sg-sE-fbx">
+            <objects>
+                <viewController restorationIdentifier="LineChartController" storyboardIdentifier="LineChartController" id="QBq-Bd-8wt" customClass="LineChartController" customModule="HealthKit_Chart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="um8-l9-xAP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2z-Bs-6ZZ" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="19" y="9.5" width="337.5" height="668"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V2z-Bs-6ZZ" firstAttribute="centerX" secondItem="EWi-s6-qT6" secondAttribute="centerX" id="TWv-GL-eVn"/>
+                            <constraint firstItem="V2z-Bs-6ZZ" firstAttribute="centerY" secondItem="EWi-s6-qT6" secondAttribute="centerY" id="cys-W9-fwM"/>
+                            <constraint firstItem="V2z-Bs-6ZZ" firstAttribute="width" secondItem="um8-l9-xAP" secondAttribute="width" multiplier="0.9" id="dho-Ts-5pn"/>
+                            <constraint firstItem="V2z-Bs-6ZZ" firstAttribute="height" secondItem="um8-l9-xAP" secondAttribute="height" constant="0.90000000000000002" id="kaP-8e-65a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EWi-s6-qT6"/>
+                    </view>
+                    <connections>
+                        <outlet property="lineChartView" destination="V2z-Bs-6ZZ" id="dIi-r4-ljf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7c-Rr-vbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407" y="-1406"/>
+        </scene>
+        <!--Pie Chart Controller-->
+        <scene sceneID="Kyu-U9-51m">
+            <objects>
+                <viewController restorationIdentifier="CombinedChartController" storyboardIdentifier="CombinedChartController" id="TS7-ka-klr" customClass="PieChartController" customModule="HealthKit_Chart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ifl-gl-IKc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoK-bz-5gz" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="19" y="43.5" width="337.5" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KoK-bz-5gz" firstAttribute="centerY" secondItem="asJ-lJ-qNR" secondAttribute="centerY" id="8Wb-b2-Aig"/>
+                            <constraint firstItem="KoK-bz-5gz" firstAttribute="centerX" secondItem="asJ-lJ-qNR" secondAttribute="centerX" id="Jpm-c4-nxo"/>
+                            <constraint firstItem="KoK-bz-5gz" firstAttribute="height" secondItem="ifl-gl-IKc" secondAttribute="height" multiplier="0.9" id="kex-wz-c25"/>
+                            <constraint firstItem="KoK-bz-5gz" firstAttribute="width" secondItem="ifl-gl-IKc" secondAttribute="width" multiplier="0.9" id="xGh-eU-Xhp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="asJ-lJ-qNR"/>
+                    </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="KoK-bz-5gz" id="iP2-ZC-YBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tm1-dR-GyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="-1371"/>
         </scene>
         <!--Profile-->
         <scene sceneID="nWm-2c-wse">
@@ -237,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niw-ok-Ze6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="806"/>
+            <point key="canvasLocation" x="774" y="741"/>
         </scene>
     </scenes>
 </document>

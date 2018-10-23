@@ -75,5 +75,4 @@ class WorkoutController: FormViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

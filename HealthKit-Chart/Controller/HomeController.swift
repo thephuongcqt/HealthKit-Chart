@@ -12,8 +12,7 @@ class HomeController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorizeHealthKit()
-        // Do any additional setup after loading the view, typically from a nib.
+        authorizeHealthKit()        
     }
     
     private func authorizeHealthKit() {
@@ -30,6 +29,5 @@ class HomeController: UITabBarController {
             print("HealthKit Successfully Authorized.")
         }
     }
-
 }
 
